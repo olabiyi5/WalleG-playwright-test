@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Build Docker image
+docker-compose build
+
+# Run Playwright tests in container
+docker-compose up --abort-on-container-exit

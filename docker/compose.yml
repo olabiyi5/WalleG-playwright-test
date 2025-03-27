@@ -1,0 +1,9 @@
+version: "3"
+services:
+  playwright:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ./tests:/app/tests
+    network_mode: "host"  # Ensures communication with local services if needed
