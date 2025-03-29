@@ -9,13 +9,13 @@ test.describe('Positive Checkout Flow', () => {
     await page.waitForSelector('.product-item-link');
 
     // Add the first product to the cart
-    await page.locator('.product-item-link').first().click();
-    await page.waitForTimeout(1000);
+    await page.locator('.product-item-link').first().click()
     await page.locator('#product-addtocart-button').click();
 
     // Proceed to checkout
     await page.locator('.showcart').click();
-    await page.locator('top-cart-btn-checkout').click();
+    await page.waitForTimeout(1000);
+    await page.locator("top-cart-btn-checkout").click();
     // Fill in customer details
     await page.locator('#customer-email').fill('gbengaolabiyi5@gmail..com');
     await page.locator('[name="firstname"]').fill('Gbenga');
