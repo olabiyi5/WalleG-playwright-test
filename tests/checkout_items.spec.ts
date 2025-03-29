@@ -10,6 +10,7 @@ test.describe('Positive Checkout Flow', () => {
 
     // Add the first product to the cart
     await page.locator('.product-item-link').first().click();
+    await page.waitForTimeout(1000);
     await page.locator('#product-addtocart-button').click();
 
     // Proceed to checkout

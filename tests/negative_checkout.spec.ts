@@ -8,6 +8,7 @@ test.describe('Negative Checkout Flow', () => {
         await page.goto('https://magento-2.showcase-wallee.com/checkout');
 
         // Attempt checkout with empty required fields
+        await page.waitForTimeout(7000);
         await page.locator('.button.action.continue').click();
 
         // Assert error messages
