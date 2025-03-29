@@ -19,11 +19,12 @@ test.describe('Negative Checkout Flow', () => {
             await page.goto('https://magento-2.showcase-wallee.com');
 
             // Navigate to login page
-            await page.locator('text=Sign In').click();
+            await page.locator('a', { hasText: 'Sign In' }).click();
+
 
             // Fill in invalid credentials
-            await page.locator('#email').fill('wronguser@example.com');
-            await page.locator('#pass').fill('WrongPassword');
+            await page.locator('#email').fill('bad@example.com');
+            await page.locator('#pass').fill('ghhfghhjhdh');
 
             // Submit login form
             await page.locator('#send2').click();
