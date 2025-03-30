@@ -7,9 +7,9 @@ This project contains automated tests using Playwright and TypeScript to validat
 ## Features
 
 - Test Scenarios:
-    - Positive checkout flow.
-    - Negative checkout validation errors.
-    - Product category navigation.
+    - checkout items flow.
+    - Empty cart spec
+    - search product
 - Dockerized testing environment.
 - CI pipeline-ready configuration.
 

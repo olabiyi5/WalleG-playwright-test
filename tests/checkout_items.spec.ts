@@ -14,7 +14,6 @@ test.describe('Positive Checkout Flow', () => {
 
     // Proceed to checkout
     await page.locator('.showcart').click();
-    await page.waitForTimeout(1000);
     await page.locator('#top-cart-btn-checkout').click();
     // Fill in customer details
     await page.locator('#customer-email').fill('gbengaolabiyi5@gmail..com');
