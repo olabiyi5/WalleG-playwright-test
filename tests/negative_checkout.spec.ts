@@ -4,12 +4,12 @@ test.describe('Invalid Login Attempt', () => {
             await page.goto('https://magento-2.showcase-wallee.com');
 
             // Navigate to login page
-            await page.locator('a', { hasText: 'Sign In' }).click();
+            await page.locator('text=Sign In').click();
 
 
             // Fill in invalid credentials
-            await page.locator('#email').fill('bad@example.com');
-            await page.locator('#pass').fill('ghhfghhjhdh');
+            await page.locator('#email').fill('ggggg@mail.com');
+            await page.locator('#pass').fill('oleg');
 
             // Submit login form
             await page.locator('#send2').click();
